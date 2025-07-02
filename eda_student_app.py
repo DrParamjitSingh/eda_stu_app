@@ -10,8 +10,32 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.title("📊 Student Performance EDA Project")
-st.write("This app explores a student performance dataset using EDA techniques.")
+st.subheader("📊 Student Performance EDA Project")
+#st.write("##### 📊 Student Performance EDA Project")
+#st.write("This app explores a student performance dataset using EDA techniques.")
+
+# Using padding-left or margin-left to push the text over.
+# 'em' units are relative to the font size, so it can be more robust than 'px'
+# for text alignment, but still requires tuning.
+st.markdown(
+    """
+    <p style="margin-top: -15px;padding-left: 6ch; font-weight: 400; font-size: normal;margin-bottom: 0px;">
+        (This app explores a student performance dataset using EDA techniques.)
+    </p>
+    <p style="padding-left: 8ch; font-weight: 300; font-size: small;color: #666;margin-bottom: 0px;">
+        © Copyright Dr Paramjit Singh, 2025. All Rights Reserved.
+    </p>
+    <p style="padding-left: 8ch; font-weight: 300; font-size: small;color: #666;margin-bottom: 0px;">
+        ______________________________________
+    </p>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
 
 # Load Data
 df = pd.read_csv("student_performance.csv")
@@ -49,3 +73,4 @@ st.subheader("🔥 Correlation Heatmap")
 sns.heatmap(df[['math score', 'reading score', 'writing score']].corr(), annot=True, cmap='coolwarm')
 st.pyplot(plt.gcf())
 plt.clf()
+
