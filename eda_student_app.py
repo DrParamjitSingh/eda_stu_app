@@ -11,7 +11,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #st.subheader("📊 Student Performance EDA Project")
-st.subheader("📊 STUDENTS SCORES DECODED!")
+#st.subheader("📊 STUDENTS SCORES DECODED!")
+st.subheader("📊 THE GRADE DECODER!")
 
 #st.write("##### 📊 Student Performance EDA Project")
 #st.write("This app explores a student performance dataset using EDA techniques.")
